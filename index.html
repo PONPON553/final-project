@@ -58,7 +58,7 @@
         
         /* Герой секція */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1200x600');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_84a4b8e1d78ddcd3c74fbd377d6b2ce2f3b36c36.1920x1080.jpg?t=1698416595');
             background-size: cover;
             background-position: center;
             padding: 100px 0;
@@ -121,6 +121,49 @@
         .card li {
             margin-bottom: 8px;
         }
+
+        /* Стилі для картинок */
+        .game-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            border: 2px solid #ff6a00;
+        }
+
+        .small-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .image-left {
+            float: left;
+            margin: 0 20px 10px 0;
+            max-width: 250px;
+        }
+
+        .image-right {
+            float: right;
+            margin: 0 0 10px 20px;
+            max-width: 250px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-caption {
+            color: #888;
+            font-size: 14px;
+            margin-top: 5px;
+            font-style: italic;
+        }
         
         /* Сервери */
         .server-type {
@@ -128,6 +171,7 @@
             margin: 20px 0;
             padding: 20px;
             border-left: 4px solid #ff6a00;
+            overflow: hidden;
         }
         
         .server-type h3 {
@@ -141,6 +185,7 @@
             margin: 15px 0;
             padding: 15px;
             border-radius: 5px;
+            overflow: hidden;
         }
         
         .dlc-item h4 {
@@ -154,6 +199,7 @@
             margin: 15px 0;
             padding: 15px;
             border-radius: 5px;
+            overflow: hidden;
         }
         
         .campaign h4 {
@@ -209,6 +255,13 @@
                 margin: 5px auto;
                 width: 200px;
             }
+
+            .image-left, .image-right {
+                float: none;
+                display: block;
+                margin: 10px auto;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -239,8 +292,14 @@
     <section id="servers">
         <div class="container">
             <h2>Типи серверів ARMA 3</h2>
+
+            <div class="image-container">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_08d095c476a8c8b2e7d4339c8da4b7bb6c4941eb.1920x1080.jpg?t=1698416595" alt="Кооперативна гра в ARMA 3" class="game-image">
+                <div class="image-caption">Кооперативна місія в ARMA 3</div>
+            </div>
             
             <div class="server-type">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0f484b2d34b6e50297c3c7e4b8c4b1d465b8f8a7.1920x1080.jpg?t=1698416595" alt="PvE геймплей" class="image-left">
                 <h3>PvE сервери (Гравці проти комп'ютера)</h3>
                 <p><strong>Invade & Annex</strong> - найпопулярніший кооперативний режим. Гравці разми виконують завдання по захопленню територій.</p>
                 <p><strong>Antistasi</strong> - партизанська війна. Треба звільнити острів від окупантів, захоплюючи міста і техніку.</p>
@@ -248,6 +307,7 @@
             </div>
             
             <div class="server-type">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0e3db0e67b7b0bcfb3b2e7e2c7b7b0e8b7b7b7b7.1920x1080.jpg?t=1698416595" alt="PvP битви" class="image-right">
                 <h3>PvP сервери (Гравці проти гравців)</h3>
                 <p><strong>King of the Hill</strong> - три команди б'ються за контроль над точкою. Дуже динамічно і цікаво.</p>
                 <p><strong>Warlords</strong> - масштабні битви з технікою і будівництвом баз.</p>
@@ -255,6 +315,7 @@
             </div>
             
             <div class="server-type">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0e3db0e67b7b0bcfb3b2e7e2c7b7b0e8b7b7b7b7.1920x1080.jpg?t=1698416595" alt="RolePlay" class="image-left">
                 <h3>RolePlay сервери</h3>
                 <p><strong>Altis Life</strong> - рольова гра на острові Альтіс. Можна бути поліцейським, лікарем, бандитом або бізнесменом.</p>
                 <p><strong>Military RP</strong> - серйозна рольова гра за солдатів з чіткою структурою і наказами.</p>
@@ -266,8 +327,14 @@
     <section id="campaigns" style="background-color: #252525;">
         <div class="container">
             <h2>Офіційні кампанії</h2>
+
+            <div class="image-container">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0e3db0e67b7b0bcfb3b2e7e2c7b7b0e8b7b7b7b7.1920x1080.jpg?t=1698416595" alt="Кампанія ARMA 3" class="game-image">
+                <div class="image-caption">Офіційна кампанія ARMA 3</div>
+            </div>
             
             <div class="campaign">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0f484b2d34b6e50297c3c7e4b8c4b1d465b8f8a7.1920x1080.jpg?t=1698416595" alt="Кампанія Вихід" class="image-right small-image">
                 <h4>Вихід (Survivor) - Базова кампанія</h4>
                 <p>Ви - солдат НАТО, який потрапив у ворожий тил на острові Стратіс. Треба виживати і знаходити союзників.</p>
                 <ul>
@@ -278,6 +345,7 @@
             </div>
             
             <div class="campaign">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_08d095c476a8c8b2e7d4339c8da4b7bb6c4941eb.1920x1080.jpg?t=1698416595" alt="Кампанія Відступ" class="image-left small-image">
                 <h4>Відступ (Adapt) - Продовження</h4>
                 <p>Після виживання ви приєднуєтесь до партизан і ведете підпільну війну проти окупантів.</p>
                 <ul>
@@ -298,6 +366,7 @@
             </div>
             
             <div class="campaign">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0e3db0e67b7b0bcfb3b2e7e2c7b7b0e8b7b7b7b7.1920x1080.jpg?t=1698416595" alt="Кампанія Apex" class="image-right small-image">
                 <h4>Apex - Кооперативна кампанія</h4>
                 <p>Спецоперації на тропічному острові Танoa. Розроблена для гри вдвох.</p>
                 <ul>
@@ -313,8 +382,14 @@
     <section id="dlc">
         <div class="container">
             <h2>Офіційні DLC (додатки)</h2>
+
+            <div class="image-container">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0f484b2d34b6e50297c3c7e4b8c4b1d465b8f8a7.1920x1080.jpg?t=1698416595" alt="DLC ARMA 3" class="game-image">
+                <div class="image-caption">Офіційні DLC для ARMA 3</div>
+            </div>
             
             <div class="dlc-item">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_08d095c476a8c8b2e7d4339c8da4b7bb6c4941eb.1920x1080.jpg?t=1698416595" alt="DLC Apex" class="image-left small-image">
                 <h4>Apex</h4>
                 <p>Найбільше розширення з новим островом Танoa, технікою і кампанією.</p>
                 <ul>
@@ -335,6 +410,7 @@
             </div>
             
             <div class="dlc-item">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0e3db0e67b7b0bcfb3b2e7e2c7b7b0e8b7b7b7b7.1920x1080.jpg?t=1698416595" alt="DLC Перший Контакт" class="image-right small-image">
                 <h4>Перший Контакт (First Contact)</h4>
                 <p>Наукова фантастика в ARMA 3. Дослідження НЛО і таємничих явищ.</p>
                 <ul>
@@ -360,6 +436,12 @@
     <section id="mechanics" style="background-color: #252525;">
         <div class="container">
             <h2>Ключові механіки гри</h2>
+
+            <div class="image-container">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_0f484b2d34b6e50297c3c7e4b8c4b1d465b8f8a7.1920x1080.jpg?t=1698416595" alt="Геймплей ARMA 3" class="game-image">
+                <div class="image-caption">Тактичний геймплей ARMA 3</div>
+            </div>
+
             <div class="cards">
                 <div class="card">
                     <h3>Тактика і стратегія</h3>
@@ -434,6 +516,12 @@
     <section id="about">
         <div class="container">
             <h2>Про ARMA 3</h2>
+
+            <div class="image-container">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/107410/ss_08d095c476a8c8b2e7d4339c8da4b7bb6c4941eb.1920x1080.jpg?t=1698416595" alt="ARMA 3" class="game-image">
+                <div class="image-caption">ARMA 3 - військовий тактичний симулятор</div>
+            </div>
+
             <p>ARMA 3 - це військовий тактичний симулятор, розроблений чеською студією Bohemia Interactive. Гра відома своїм реалізмом, величезними відкритими світами і неймовірною свободою дій.</p>
             
             <div class="cards">
