@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARMA 3 - Реалізм. Тактика. Свобода.</title>
+    <style>
+        /* Основні стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Шапка */
+        header {
+            background-color: #2d2d2d;
+            padding: 20px 0;
+            border-bottom: 3px solid #ff6a00;
+        }
+        
+        .logo {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6a00;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+        
+        nav a:hover {
+            background-color: #ff6a00;
+            color: black;
+        }
+        
+        /* Герой секція */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1200x600');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff6a00;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Секції */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #ff6a00;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        /* Картки */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .card h3 {
+            color: #ff6a00;
+            border-bottom: 2px solid #ff6a00;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+        }
+        
+        /* Сервери */
+        .server-type {
+            background-color: #2d2d2d;
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 4px solid #ff6a00;
+        }
+        
+        .server-type h3 {
+            color: #ff6a00;
+            margin-top: 0;
+        }
+        
+        /* DLC */
+        .dlc-item {
+            background-color: #2d2d2d;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .dlc-item h4 {
+            color: #ff6a00;
+            margin: 0 0 10px 0;
+        }
+        
+        /* Кампанії */
+        .campaign {
+            background-color: #2d2d2d;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .campaign h4 {
+            color: #ff6a00;
+            margin: 0 0 10px 0;
+        }
+        
+        /* Підвал */
+        footer {
+            background-color: #2d2d2d;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 3px solid #ff6a00;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section {
+            width: 250px;
+            margin: 10px;
+        }
+        
+        .footer-section h4 {
+            color: #ff6a00;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                width: 90%;
+            }
+            
+            nav a {
+                display: block;
+                margin: 5px auto;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container">
+            <div class="logo">ARMA 3</div>
+            <nav>
+                <a href="#servers">Сервери</a>
+                <a href="#campaigns">Кампанії</a>
+                <a href="#dlc">DLC</a>
+                <a href="#mechanics">Механіки</a>
+                <a href="#about">Про гру</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой секція -->
+    <section class="hero">
+        <div class="container">
+            <h1>ARMA 3 - Реалізм. Тактика. Свобода.</h1>
+            <p>Військовий симулятор з відкритим світом, де ти сам вибираєш свій шлях. Реалістичні бої, тактичні операції та безмежні можливості.</p>
+        </div>
+    </section>
+
+    <!-- Сервери -->
+    <section id="servers">
+        <div class="container">
+            <h2>Типи серверів ARMA 3</h2>
+            
+            <div class="server-type">
+                <h3>PvE сервери (Гравці проти комп'ютера)</h3>
+                <p><strong>Invade & Annex</strong> - найпопулярніший кооперативний режим. Гравці разми виконують завдання по захопленню територій.</p>
+                <p><strong>Antistasi</strong> - партизанська війна. Треба звільнити острів від окупантів, захоплюючи міста і техніку.</p>
+                <p><strong>Dynamic Recon Ops</strong> - випадкові місії для невеликих груп.</p>
+            </div>
+            
+            <div class="server-type">
+                <h3>PvP сервери (Гравці проти гравців)</h3>
+                <p><strong>King of the Hill</strong> - три команди б'ються за контроль над точкою. Дуже динамічно і цікаво.</p>
+                <p><strong>Warlords</strong> - масштабні битви з технікою і будівництвом баз.</p>
+                <p><strong>Team Deathmatch</strong> - класичні командин битви на виживання.</p>
+            </div>
+            
+            <div class="server-type">
+                <h3>RolePlay сервери</h3>
+                <p><strong>Altis Life</strong> - рольова гра на острові Альтіс. Можна бути поліцейським, лікарем, бандитом або бізнесменом.</p>
+                <p><strong>Military RP</strong> - серйозна рольова гра за солдатів з чіткою структурою і наказами.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кампанії -->
+    <section id="campaigns" style="background-color: #252525;">
+        <div class="container">
+            <h2>Офіційні кампанії</h2>
+            
+            <div class="campaign">
+                <h4>Вихід (Survivor) - Базова кампанія</h4>
+                <p>Ви - солдат НАТО, який потрапив у ворожий тил на острові Стратіс. Треба виживати і знаходити союзників.</p>
+                <ul>
+                    <li>Ідеально для новачків</li>
+                    <li>Навчає основам гри</li>
+                    <li>Нелінійний сюжет</li>
+                </ul>
+            </div>
+            
+            <div class="campaign">
+                <h4>Відступ (Adapt) - Продовження</h4>
+                <p>Після виживання ви приєднуєтесь до партизан і ведете підпільну війну проти окупантів.</p>
+                <ul>
+                    <li>Партизанська тактика</li>
+                    <li>Рейди і диверсії</li>
+                    <li>Більше тактики і планування</li>
+                </ul>
+            </div>
+            
+            <div class="campaign">
+                <h4>Перемога (Win) - Фінал</h4>
+                <p>Повномасштабний наступ з використанням важкої техніки, авіації і артилерії.</p>
+                <ul>
+                    <li>Великі битви</li>
+                    <li>Важка техніка</li>
+                    <li>Повітряна підтримка</li>
+                </ul>
+            </div>
+            
+            <div class="campaign">
+                <h4>Apex - Кооперативна кампанія</h4>
+                <p>Спецоперації на тропічному острові Танoa. Розроблена для гри вдвох.</p>
+                <ul>
+                    <li>Гра вдвох з другом</li>
+                    <li>Новий острів Танoa</li>
+                    <li>Сучасне озброєння</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- DLC -->
+    <section id="dlc">
+        <div class="container">
+            <h2>Офіційні DLC (додатки)</h2>
+            
+            <div class="dlc-item">
+                <h4>Apex</h4>
+                <p>Найбільше розширення з новим островом Танoa, технікою і кампанією.</p>
+                <ul>
+                    <li>Острів Танoa 100 км²</li>
+                    <li>Нова техніка CSAT</li>
+                    <li>Кооперативна кампанія</li>
+                </ul>
+            </div>
+            
+            <div class="dlc-item">
+                <h4>Закони Війни (Laws of War)</h4>
+                <p>Унікальний досвід гуманітарного працівника. Мінімум боїв, максимум допомоги.</p>
+                <ul>
+                    <li>Розмінування територій</li>
+                    <li>Допомога цивільним</li>
+                    <li>Нова перспектива війни</li>
+                </ul>
+            </div>
+            
+            <div class="dlc-item">
+                <h4>Перший Контакт (First Contact)</h4>
+                <p>Наукова фантастика в ARMA 3. Дослідження НЛО і таємничих явищ.</p>
+                <ul>
+                    <li>Зустріч з НЛО</li>
+                    <li>Прототипна зброя</li>
+                    <li>Острів Сахрані</li>
+                </ul>
+            </div>
+            
+            <div class="dlc-item">
+                <h4>Тактика (Tac-Ops)</h4>
+                <p>Складнощі тактичні місії для морської піхоти США.</p>
+                <ul>
+                    <li>3 великі місії</li>
+                    <li>Акцент на тактиці</li>
+                    <li>Для досвідчених гравців</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Механіки -->
+    <section id="mechanics" style="background-color: #252525;">
+        <div class="container">
+            <h2>Ключові механіки гри</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Тактика і стратегія</h3>
+                    <ul>
+                        <li>Планування операцій</li>
+                        <li>Координація з підрозділом</li>
+                        <li>Використання прикриття</li>
+                        <li>Флангові маневри</li>
+                        <li>Взаємодія з технікою</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Реалістична зброя</h3>
+                    <ul>
+                        <li>Балістика і падіння куль</li>
+                        <li>Віддача і управління вогнем</li>
+                        <li>Різні типи боєприпасів</li>
+                        <li>Модифікація зброї</li>
+                        <li>Обмежений боєкомплект</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Відкритий світ</h3>
+                    <ul>
+                        <li>Великі карти до 270 км²</li>
+                        <li>Вільне пересування</li>
+                        <li>Динамічна погода</li>
+                        <li>Зміна дня і ночі</li>
+                        <li>Різноманітний ландшафт</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Техніка і транспорт</h3>
+                    <ul>
+                        <li>Танки і бронетехніка</li>
+                        <li>Гелікоптери і літаки</li>
+                        <li>Морські судна</li>
+                        <li>Ремонт і заправка</li>
+                        <li>Тактичне використання</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Модифікації</h3>
+                    <ul>
+                        <li>Тисячі модів від спільноти</li>
+                        <li>Нова зброя і техніка</li>
+                        <li>Додаткові карти</li>
+                        <li>Геймплейні зміни</li>
+                        <li>Легке встановлення</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Редактор місій</h3>
+                    <ul>
+                        <li>Створення власних місій</li>
+                        <li>Візуальне редагування</li>
+                        <li>Скриптування</li>
+                        <li>Спільне використання</li>
+                        <li>Безмежні можливості</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Про гру -->
+    <section id="about">
+        <div class="container">
+            <h2>Про ARMA 3</h2>
+            <p>ARMA 3 - це військовий тактичний симулятор, розроблений чеською студією Bohemia Interactive. Гра відома своїм реалізмом, величезними відкритими світами і неймовірною свободою дій.</p>
+            
+            <div class="cards">
+                <div class="card">
+                    <h3>Особливості</h3>
+                    <ul>
+                        <li>Реалістичний бойовий досвід</li>
+                        <li>Величезні ігрові простори</li>
+                        <li>Розвинена модифікація</li>
+                        <li>Активна спільнота</li>
+                        <li>Регулярні оновлення</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Для кого ця гра?</h3>
+                    <ul>
+                        <li>Любителі тактики</li>
+                        <li>Фанати військової тематики</li>
+                        <li>Творчі люди (редактор)</li>
+                        <li>Командні гравці</li>
+                        <li>Шукачі пригод</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Системні вимоги</h3>
+                    <ul>
+                        <li>Процесор: Intel Core i5</li>
+                        <li>Відеокарта: NVIDIA GeForce GTX 660</li>
+                        <li>Оперативна пам'ять: 8 GB</li>
+                        <li>Місце на диску: 35 GB</li>
+                        <li>ОС: Windows 7/8/10 (64-bit)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Підвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <p>Офіційний сайт: bohemia.net</p>
+                    <p>Steam сторінка: store.steampowered.com</p>
+                    <p>Форум спільноти: forums.bohemia.net</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Корисні посилання</h4>
+                    <p>Арсенал</p>
+                    <p>Редактор місій</p>
+                    <p>Майстерня Steam</p>
+                    <p>Вікі ARMA</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Соціальні мережі</h4>
+                    <p>Twitter</p>
+                    <p>Facebook</p>
+                    <p>YouTube</p>
+                    <p>Discord</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2024 ARMA 3. Всі права захищені. Bohemia Interactive.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
